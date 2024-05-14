@@ -51,6 +51,8 @@ fun EditView(
         Button(
             onClick = {
                 if (isTextFieldVisible.value) {
+
+                    action.invoke(textState.value)
                     isTextFieldVisible.value = false
                     textState.value = ""
                 } else {
