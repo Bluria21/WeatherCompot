@@ -1,7 +1,6 @@
 package com.blruia.weathercompot.network
 
 import com.blruia.weathercompot.model.WeatherResponse
-import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -17,6 +16,6 @@ interface WeatherApiClient {
         @Query("key") key: String = API_KEY,
         @Query("days") days: Int = FORECAST_DAYS_COUNT,
         @Query("aqi") aqi: String = "no",
-        @Query("alerts") alerts: String = "no"
-    ): Single<WeatherResponse>
+        @Query("alerts") alerts: String = "no",
+    ): WeatherResponse
 }

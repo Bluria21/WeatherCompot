@@ -20,14 +20,16 @@ private const val BASE_URL = "http://api.weatherapi.com/v1/"
 @Module
 @InstallIn(SingletonComponent::class)
 object DataModule {
+
     @Provides
     @Singleton
     fun provideRepository(
         apiClient: WeatherApiClient,
-        systemDataRepository: SystemDataRepository
+        systemDataRepository: SystemDataRepository,
     ): WeatherRepository {
         return WeatherRepository(apiClient, systemDataRepository)
     }
+
     @Provides
     fun provideOkHttpClient(): OkHttpClient =
         with(OkHttpClient.Builder()) {
@@ -44,7 +46,7 @@ object DataModule {
 
     @Provides
     fun provideApiClient(
-        httpClient: OkHttpClient
+        httpClient: OkHttpClient,
     ): WeatherApiClient {
         return Retrofit.Builder()
             .client(httpClient)

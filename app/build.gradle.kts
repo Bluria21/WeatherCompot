@@ -78,13 +78,6 @@ dependencies {
     implementation(libs.coil.compose)
 
 
-    // Rx
-    implementation ("io.reactivex.rxjava2:rxkotlin:2.0.0")
-    implementation ("io.reactivex.rxjava2:rxjava:2.0.0")
-
-
-
-
     // Hilt
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
@@ -94,7 +87,6 @@ dependencies {
     implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
     //Retrofit
     implementation (libs.gson)
-    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
