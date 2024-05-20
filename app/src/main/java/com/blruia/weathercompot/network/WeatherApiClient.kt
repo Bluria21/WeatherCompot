@@ -1,6 +1,6 @@
-package com.blruia.weathercompot.Network
+package com.blruia.weathercompot.network
 
-import com.blruia.yourweather.data.model.WeatherResponse
+import com.blruia.weathercompot.model.WeatherResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

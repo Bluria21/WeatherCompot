@@ -12,7 +12,7 @@ fun MainScreen(
     mainViewModel: MainViewModel,
     navController: NavController,
 ) {
-    if (mainViewModel.location?.value?.name.isNullOrEmpty()) {
+    if (mainViewModel.responseList.isNullOrEmpty()) {
         Text(text = "НЕ НАЙДЕНО")
     } else {
         RecyclerView(

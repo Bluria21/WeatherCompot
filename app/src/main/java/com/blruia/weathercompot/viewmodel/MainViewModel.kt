@@ -6,7 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.blruia.weathercompot.repository.WeatherRepository
 import com.blruia.yourweather.data.model.LocationDto
-import com.blruia.yourweather.data.model.WeatherResponse
+import com.blruia.weathercompot.model.WeatherResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

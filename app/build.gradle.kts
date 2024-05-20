@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-android")
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -51,6 +52,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -72,13 +77,20 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.coil.compose)
     implementation (libs.gson)
-    implementation ("com.google.dagger:hilt-android:2.49")
-    kapt ("com.google.dagger:hilt-android-compiler:2.44")
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    implementation ("com.google.dagger:hilt-android:2.45")
+    kapt ("com.google.dagger:hilt-android-compiler:2.45")
+    implementation ("io.reactivex.rxjava2:rxkotlin:2.0.0")
+    implementation ("io.reactivex.rxjava2:rxjava:2.0.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.3")
+
+
+
 
     // Navigation
-    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha10")
-    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0-alpha03")
+    implementation ("androidx.navigation:navigation-compose:2.7.7")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+    //Retrofit
+    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
 
 }

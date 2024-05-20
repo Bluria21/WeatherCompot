@@ -1,6 +1,6 @@
 package com.blruia.weathercompot.view
 
-import Model.ConditionDto
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Row
@@ -13,11 +13,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.blruia.yourweather.data.model.LocationDto
+import com.blruia.weathercompot.model.WeatherResponse
+
 
 @Composable
 fun RecyclerView(
-    items: List<LocationDto?>,
+    items: List<WeatherResponse>?,
     navController: NavController,
     idCallback: ((Int) -> Unit)? = null,
 ) {
@@ -31,7 +32,7 @@ fun RecyclerView(
                     .background(Color.Gray)
                     .fillMaxWidth()
             ) {
-                TextView(text = location?.name , modifier = Modifier)
+                TextView(text = location.location.name, modifier = Modifier)
             }
 }
     }
